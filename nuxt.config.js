@@ -44,5 +44,17 @@ export default {
     */
     extend(config, ctx) {
     }
+  },
+  /**
+   * Router extension
+   */
+  router: {
+    extendRoutes (routes, resolve) {
+      routes.push({
+        name: '404-fallback',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue')
+      })
+    }
   }
 }
