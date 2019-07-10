@@ -6,18 +6,16 @@ export default {
   layout: 'StaticMessage',
   head() {
     return {
-      title: 'Imani Dap | Coming Soon',
+      title: 'Imani Dap | 404',
     }
   },
   beforeMount() {
     this.$store.commit('addStaticMessageLayout', { 
-      slug: 'coming-soon', 
-      name: 'coming soon', 
-      title: 'Time for change', 
-      subtitle: 'new site coming soon',
+      slug: '404', 
+      name: '404', 
+      title: 'Oops', 
+      subtitle: 'unable to find this page',
     })
   }
 }
 </script>
-
-
