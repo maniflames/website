@@ -31,7 +31,8 @@ main {
 
 h1, p {
     text-transform: uppercase;
-    margin: 0px; 
+    margin: 0px;
+    z-index: 100;
 }
 
 h1 {
