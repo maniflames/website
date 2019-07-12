@@ -12,7 +12,8 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "three": "^0.106.2"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",

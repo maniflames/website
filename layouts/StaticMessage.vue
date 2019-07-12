@@ -1,13 +1,22 @@
 <template>
   <div>
     <main>
+      <Trail />
       <h1>{{ $store.state.layouts.staticMessage.title }}</h1>
       <p>{{ $store.state.layouts.staticMessage.subtitle }}</p>
       <nuxt/>
     </main>
   </div>
 </template>
+<script>
+import Trail from '~/components/Trail.vue'
 
+export default {
+  components: {
+    Trail,
+  }
+}
+</script>
 <style lang="css" scoped>
 main {
     margin: 0px;
