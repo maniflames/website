@@ -1,0 +1,22 @@
+{
+  "name": "Website",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "author": "Imani Dap",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "fibers": "^4.0.1",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.0.0",
+    "sass": "^1.22.12",
+    "sass-loader": "^8.0.0"
+  },
+  "devDependencies": {}
+}
