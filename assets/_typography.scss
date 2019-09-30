@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Inter'; 
+    font-style:  normal;
+    font-weight: 400;
+    src: url("/fonts/Inter/Inter-Regular.woff2") format("woff2"),
+         url("/fonts/Inter/Inter-Regular.woff") format("woff"),
+         url("/fonts/Inter/Inter-Regular.ttf") format("ttf"),
+         url("/fonts/Inter/Inter-Regular.otf") format("otf"); 
+}
+
+@font-face {
+    font-family: 'Inter'; 
+    font-style:  normal;
+    font-weight: 600;
+    src: url("/fonts/Inter/Inter-SemiBold.woff2") format("woff2"),
+         url("/fonts/Inter/Inter-SemiBold.woff") format("woff"),
+         url("/fonts/Inter/Inter-SemiBold.ttf") format("ttf"),
+         url("/fonts/Inter/Inter-SemiBold.otf") format("otf"); 
+}
+
+@font-face {
+    font-family: 'Merriweather'; 
+    font-style:  normal;
+    font-weight: 400;
+    src: url("/fonts/Merriweather/Merriweather-Regular.ttf") format("ttf"),
+}
+
+@font-face {
+    font-family: 'MarkerMark'; 
+    font-style:  normal;
+    font-weight: 400;
+    src: url("/fonts/Marker-Mark-Font/MarkerMark-Regular.woff") format("woff"),
+         url("/fonts/Marker-Mark-Font/MarkerMark-Regular.ttf") format("ttf"),
+         url("/fonts/Marker-Mark-Font/Marker-Mark.otf") format("otf"); 
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-family-heading;
+    font-weight: normal; 
+}
+
+h1 {
+    font-size: 4.1875em; 
+}
+
+h2 {
+    font-size: 3.125em;
+}
+
+h3 {
+    font-size: 2.3125em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+html, body, p, span, div, ul, li {
+    font-family: $font-family-text; 
+}
+

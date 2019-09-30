@@ -1,7 +1,14 @@
 @import "normalize.css";
 @import "variables"; 
+@import "typography";
 
-// some global normalizations 
+// global resets
 ul {
     padding: 0; 
+}
+
+//shared styles
+html, body {
+    background-color: $primary-dark-2; 
+    color: $broken-white; 
 }
