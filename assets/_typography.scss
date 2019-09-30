@@ -34,9 +34,14 @@
          url("/fonts/Marker-Mark-Font/Marker-Mark.otf") format("otf"); 
 }
 
+* {
+    line-height: 1.75; 
+}
+
 h1, h2, h3, h4 {
     font-family: $font-family-heading;
     font-weight: normal; 
+    color: $broken-white; 
 }
 
 h1 {
@@ -55,7 +60,11 @@ h4 {
     font-size: 1.75em;
 }
 
-html, body, p, span, div, ul, li {
+html, body, p, span, div, ul, li, a {
     font-family: $font-family-text; 
+    color: $primary-light-2; 
 }
 
+a {
+    color: $primary;
+}

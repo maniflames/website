@@ -28,6 +28,7 @@ ul {
   li {
     font-family: $font-family-heading;
     padding: 16px;
+    color: $broken-white; 
 
     &:first-child {
       padding-left: 64px;
