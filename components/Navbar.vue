@@ -2,10 +2,10 @@
     <header>
       <nav>
         <ul>
-          <li><h4>Imani</h4></li>
-          <li>projects</li>
-          <li>about</li>
-          <li>writing</li>
+          <li><nuxt-link to="/"><h4>Imani</h4></nuxt-link></li>
+          <li><nuxt-link to="/">projects</nuxt-link></li>
+          <li><nuxt-link to="/about">about</nuxt-link></li>
+          <li><nuxt-link to="/writing">writing</nuxt-link></li>
         </ul>
       </nav>
     </header>
@@ -37,6 +37,13 @@ ul {
     }
   }
 
-  
+  a {
+    text-decoration: none; 
+    color: $broken-white; 
+
+    &:hover, &:hover * {
+      color: $primary; 
+    }
+  }
 }
 </style>
