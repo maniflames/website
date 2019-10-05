@@ -11,7 +11,7 @@
     </header>
 </template>
 
-<style lang="scss" >
+<style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 
 ul {
@@ -26,9 +26,18 @@ ul {
   }
 
   li {
-    font-family: $font-family-heading;
     padding: 16px;
     color: $broken-white; 
+
+    a {
+      text-decoration: none; 
+      color: $broken-white; 
+      font-family: $font-family-heading;
+      
+      &:hover, &:hover * {
+        color: $primary; 
+      }
+    }
 
     &:first-child {
       padding-left: 64px;
@@ -37,13 +46,6 @@ ul {
     }
   }
 
-  a {
-    text-decoration: none; 
-    color: $broken-white; 
 
-    &:hover, &:hover * {
-      color: $primary; 
-    }
-  }
 }
 </style>
