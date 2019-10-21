@@ -1,6 +1,8 @@
 <template>
-    <div>
-        <img :src="src" :alt="alt">
+    <div class="polaroid">
+        <div class="polaroid-clip">
+            <img :src="src" :alt="alt">
+        </div>
         <p>{{ writing }}</p>
     </div>
 </template>
@@ -18,13 +20,20 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/_variables.scss";
 
-div {
+.polaroid {
     background: #ffffff;
     padding: 24px;
     padding-bottom: 0;
     height: fit-content;
     box-shadow: 0px 8px 25px $broken-black;
     max-width: fit-content;
+}
+
+.polaroid-clip {
+    width: 270px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
 }
 
 p {
