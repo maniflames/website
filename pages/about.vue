@@ -2,7 +2,7 @@
 <div>
     <Navbar />
     <main>
-        <Polaroid src="/img/headshot.jpeg" writing="Septemeber 2019" alt="Imani's headshot, the one in which she tries to smile but not too much because it's also the picture used in a passport. The resulting look is half professional linkedin photo, half mugshot."/>
+        <Polaroid src="/img/headshot.jpg" writing="October 2019, Shanghai" alt="A selfie of Imani wearing a Fairwhale coat in Shnaghai. It looks quite futurisic with trees and tall buildings in the background."/>
         <p>
             Hi I'm Imani, a creative developer based in Rotterdam, The Netherlands. 
             I love exploring unique ways to mix technology and creativity. 

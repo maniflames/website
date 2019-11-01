@@ -47,7 +47,7 @@ p {
 }
 
 img {
-    max-height: 375px; 
+    height: 375px; 
     margin-right: auto;
     margin-left: auto;  
 }

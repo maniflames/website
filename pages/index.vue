@@ -59,12 +59,13 @@ export default {
 <style>
 main.projects {
   display: flex; 
-  overflow: scroll;
+  overflow-x: scroll;
   margin-top: 128px;
-  /* TODO: add scroll snap behaviour */
+  scroll-snap-type: x mandatory;
 }
 
 main > .polaroid {
   margin: 32px;
+  scroll-snap-align: center;
 }
 </style>
