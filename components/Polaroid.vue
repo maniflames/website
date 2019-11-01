@@ -1,5 +1,5 @@
 <template>
-    <div class="polaroid">
+    <div class="polaroid" :class="{small: isSmall}">
         <div class="polaroid-clip">
             <img :src="src" :alt="alt">
         </div>
@@ -13,6 +13,10 @@ export default {
         src: String,
         alt: String,
         writing: String,
+        isSmall: {
+            type: Boolean,
+            default: false,
+        },
     }
 }
 </script>
@@ -50,5 +54,17 @@ img {
     height: 375px; 
     margin-right: auto;
     margin-left: auto;  
+}
+
+.polaroid.small {
+    box-shadow: 0px 4px 12px $broken-black;
+
+    img {
+        height: 250px;
+    }
+
+    .polaroid-clip {
+        width: 200px 
+    }
 }
 </style>
