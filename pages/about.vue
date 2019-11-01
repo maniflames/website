@@ -118,17 +118,6 @@ main {
             margin-right: 8px;
         }
 
-        //Fill colored icons
-        #GithubLogo, #DevLogo, #LinkedinLogo {
-            fill: $primary-light-2; 
-            stroke-width: .2px;
-        }
-
-        //Stroke colored icons
-        #TwitterLogo, #MailIcon {
-            stroke: $primary-light-2;
-        }
-
         &[data-icon=LinkedinLogo] {
             align-items: flex-start;
         }
