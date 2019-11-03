@@ -138,4 +138,13 @@ main {
         }
     }
 }
+
+@media (max-width: 52em) {
+    main {
+        flex-direction: column; 
+        width: 100%;
+        margin: auto; 
+        align-items: center; 
+    }
+}
 </style>

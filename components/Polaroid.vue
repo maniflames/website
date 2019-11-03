@@ -67,4 +67,10 @@ img {
         width: 200px 
     }
 }
+
+@media (max-width: 30em) {
+    .polaroid-clip {
+        width: 210px;
+    }
+}
 </style>
