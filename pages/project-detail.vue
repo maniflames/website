@@ -13,7 +13,7 @@
         <section class="details">
             <h1>interesting title</h1>
             <div class="container">
-                <div class="columnLeft">
+                <div class="column">
                 <section v-if="details.team"> 
                     <h4>Team</h4>
                     <p>
@@ -33,7 +33,7 @@
                     </p>
                 </section>
             </div>
-            <div class="columnRight">
+            <div class="column">
                 <section v-if="details.technologies">
                     <h4>Technologies</h4>
                     <p>
@@ -79,7 +79,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta explicabo laborum mollitia cum aperiam id aliquid iure corporis impedit atque cupiditate totam hic nisi, voluptas sequi labore doloremque libero! Illo.</p>
                 <img src="/img/webdev.jpg" alt="" srcset="">
             </article>
-            <a href="#top" target="_blank" rel="noopener noreferrer">back to top</a>
+            <a href="#top">back to top</a>
         </main>
     </div>
 </template>
@@ -152,6 +152,7 @@ export default {
     display: flex;
     justify-content: space-around;
     height: 75vh; 
+    margin: 0; 
 
     .polaroid {
         position: relative;
@@ -197,7 +198,7 @@ export default {
             padding-bottom: 24px;
         }
 
-        .columnLeft, .columnRight {
+        .column {
             margin-top: 0; 
             margin: 32px;
         }
@@ -206,6 +207,10 @@ export default {
             margin: 0px; 
         }
     }
+}
+
+main {
+    padding: 32px; 
 }
 
 article {
@@ -217,6 +222,51 @@ article {
         display: block;
         margin: auto; 
         margin-top: 64px;
+    }
+}
+
+@media (max-width: 64em) {
+    .preview {
+        height: fit-content;
+        margin-top: 32px;
+        margin-bottom: 64px;  
+
+        .polaroid:first-child, 
+        .polaroid:nth-child(3) {
+            display: none;
+        }
+
+        .polaroid:nth-child(2) {
+            transform: rotate(-6deg);
+        }
+    }
+}
+
+@media (max-width: 52em) {
+    .details {
+        h1 {
+            word-wrap: break-word;
+            font-size: 3.5em;  
+        }
+
+        .container {
+            flex-direction: column; 
+            
+            .column { 
+                margin-bottom: 0; 
+                margin-top: 0; 
+            }
+        }
+    }
+
+    article {
+        h2 {
+            word-wrap: break-word;
+        }
+
+        img {
+           width: 100%; 
+        }
     }
 }
 </style>

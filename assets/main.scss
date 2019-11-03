@@ -40,3 +40,7 @@ button {
 #TwitterLogo, #MailIcon {
     stroke: $primary-light-2;
 }
+
+a {
+    scroll-behavior: smooth;
+}
