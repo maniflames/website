@@ -68,4 +68,10 @@ main > .polaroid {
   margin: 32px;
   scroll-snap-align: center;
 }
+
+@media (min-width: 119em) {
+  main.projects {
+    justify-content: center;
+  }
+}
 </style>
