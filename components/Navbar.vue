@@ -20,6 +20,7 @@ ul {
   align-items: baseline;
   justify-content: flex-end;
   margin-right: 32px; 
+  flex-wrap: wrap; 
 
   h4 {
     margin: 0;
@@ -45,7 +46,19 @@ ul {
       margin-right: auto;
     }
   }
-
-
 }
+
+@media (max-width: 30em) {
+    ul {
+      justify-content: center; 
+      text-align: center;
+      margin-right: 0;
+
+      li:first-child {
+          padding: 0;
+          padding-top: 32px; 
+          flex-basis: 100%;
+      }
+    }
+  }
 </style>
