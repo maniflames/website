@@ -72,6 +72,8 @@ article {
     margin: auto;
     margin-bottom: 48px; 
     max-width: 85ch;
+    padding-left: 32px; 
+    padding-right: 32px; 
 
     h3 {
         margin: 0; 
