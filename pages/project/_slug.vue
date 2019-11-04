@@ -11,7 +11,7 @@
             />
         </section>
         <section class="details">
-            <h1>interesting title</h1>
+            <h1>{{ title }}</h1>
             <div class="container">
                 <div class="column">
                 <section v-if="details.team"> 
@@ -46,7 +46,7 @@
                         {{ details.ended }}
                     </p>
                 </section>
-                <section v-if="details.seen"> <!-- TODO: v-if -->
+                <section v-if="details.seen">
                     <h4>As seen in</h4>
                     <ul>
                         <li v-for="publication of details.seen" :key="details.seen.indexOf(publication)">
@@ -70,15 +70,7 @@
         </div>
             </section>
         <main>
-            <article>
-                <h2>Background</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat atque laudantium aliquid accusantium? Nemo quod sequi at iure sed asperiores nisi alias. Illo tempore perspiciatis, ipsum porro molestias minus veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed laborum obcaecati adipisci quo beatae harum id provident suscipit perspiciatis ex eaque distinctio cupiditate nisi quae, fuga, fugit architecto, totam ea. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est error voluptatem ipsum quis voluptatum id reiciendis amet tempora illo magnam hic dolorem excepturi velit, fugit nihil praesentium iusto molestiae fuga.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ad quos numquam autem nisi animi veniam in tenetur excepturi aliquid! Ullam, consequuntur quos possimus ipsum hic facere delectus alias in.</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus obcaecati beatae tempora perferendis deleniti saepe corporis necessitatibus id facere! Repellat quisquam quaerat quasi incidunt praesentium eligendi illo provident, perferendis iusto! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati officiis animi, earum magni praesentium nam id alias voluptatem sapiente excepturi illum nemo. Sequi vel consequuntur dicta cupiditate assumenda, facere quas!</p>
-                <h2>Challanges</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta explicabo laborum mollitia cum aperiam id aliquid iure corporis impedit atque cupiditate totam hic nisi, voluptas sequi labore doloremque libero! Illo.</p>
-                <img src="/img/webdev.jpg" alt="" srcset="">
-            </article>
+            <article v-html="html"></article>
             <a href="#top">back to top</a>
         </main>
     </div>
@@ -97,57 +89,17 @@ export default {
         GithubLogo,
         DevLogo,
     },
-    asyncData() {
-        return {
-          title: 'testing',
-          alt: 'a project pure so I can test this stuff',
-          img: '/img/arduino.jpg',
-          details: {
-              team: 'Cye Wong-Loi Sing, Natasha van Meerkeren, David Law, Imani Dap',
-              client: 'Gemeente Rotterdam',
-              role: 'Web Developer', 
-              technologies: 'vue, nuxt, the internet',
-              ended: 'October 2019',
-              seen: [
-                {
-                    title: 'Profielen',
-                    url: 'profielen.nl', 
-                },
-                {
-                    title: 'Profielen',
-                    url: 'profielen.nl', 
-                }
-              ],
-              urls: [
-                  {
-                      icon: 'GithubLogo',
-                      url: 'github.com'
-                  },
-              ],
-          },
-          previewImages: [
-              {
-                  src: '/img/arduino.jpg',
-                  alt: 'a picture of an arduino',
-                  title: 'yaaay'
-              },
-              {
-                  src: '/img/RAM.jpg',
-                  alt: 'a picture of RAM',
-                  title: 'gotta remember something'
-              },
-              {
-                  src: '/img/webdev.jpg',
-                  alt: 'a picture of webdev',
-                  title: 'yooooo'
-              }
-          ]
-        }
-    } 
+    async asyncData({ params }) {
+        let file = await import('~/content/projects/' + params.slug + '.md')
+        let projectData = file.default.attributes
+        projectData.html = file.html
+
+        return projectData
+    }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .preview {
     display: flex;
     justify-content: space-around;
@@ -213,15 +165,16 @@ main {
     padding: 32px; 
 }
 
-article {
+main article {
     max-width: 85ch;
     margin: auto;
 
-    img {
+    img,
+    p img {
         width: 450px;
         display: block;
         margin: auto; 
-        margin-top: 64px;
+        margin-top: 64px; 
     }
 }
 
@@ -264,7 +217,8 @@ article {
             word-wrap: break-word;
         }
 
-        img {
+        img,
+        p img {
            width: 100%; 
         }
     }

@@ -49,6 +49,20 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader'
+      })
     }
+  },
+
+  generate: {
+    routes: [
+      '/project/testing',
+      '/project/testing-2',
+      '/project/testing-3',
+      '/project/testing-4',
+      '/project/testing-5'
+    ]
   }
 }

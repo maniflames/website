@@ -3,12 +3,14 @@
   <Navbar /> 
   <main>
     <div class="projects">
-        <Polaroid v-for="project of projects" 
-          :key="projects.indexOf(project)"
+      <nuxt-link v-for="project of projects" 
+          :key="projects.indexOf(project)" :to="'/project/' + project.slug">
+        <Polaroid
           :src="project.img" 
           :writing="project.title" 
           :alt="project.alt"
         />
+      </nuxt-link>
     </div>
   </main>
 </div>
@@ -24,39 +26,22 @@ export default {
     Polaroid,
   },
 
-  asyncData() {
+  async asyncData() {
+    //for some reason nuxt does not allow me to use the filesystem API, i might need to create some middelware but for now this quickfix will do
+    let projectSlugs = ['testing', 'testing-2', 'testing-3', 'testing-4', 'testing-5']
+    let projects = []
+
+    for(let slug of projectSlugs) {
+      let file = await import('~/content/projects/' + slug + '.md')
+      let projectData = file.default.attributes
+      projectData.slug = slug
+      projects.push(projectData)
+    }
+
     return {
-      projects: [
-        {
-          title: 'testing',
-          alt: 'a project pure so I can test this stuff',
-          img: '/img/arduino.jpg'
-        },
-        {
-          title: 'testing 2',
-          alt: 'testing 2',
-          img: '/img/fish.jpg'
-        },
-        {
-          title: 'testing 3',
-          alt: 'testing 3',
-          img: '/img/RAM.jpg'
-        },
-        {
-          title: 'testing 4',
-          alt: ' hello',
-          img: '/img/sport-kid.jpg'
-        },
-        {
-          title: 'testing 5',
-          alt: 'kfsknekjs',
-          img: '/img/circuit.jpg'
-        }
-      ]
+      projects: projects
     }
   }
-
-  //methods, toPrevious, toNext
 }
 </script>
 
@@ -68,9 +53,10 @@ export default {
   scroll-snap-type: x mandatory;
 }
 
-.projects > .polaroid {
+.projects > a {
   margin: 32px;
   scroll-snap-align: center;
+  text-decoration: none;
 }
 
 @media (max-width: 52em) {
