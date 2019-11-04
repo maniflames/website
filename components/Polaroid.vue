@@ -72,5 +72,9 @@ img {
     .polaroid-clip {
         width: 210px;
     }
+
+    img {
+        height: 300px; 
+    }
 }
 </style>

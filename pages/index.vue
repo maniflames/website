@@ -1,13 +1,15 @@
 <template>
 <div>
   <Navbar /> 
-  <main class="projects">
-    <Polaroid v-for="project of projects" 
-        :key="projects.indexOf(project)"
-        :src="project.img" 
-        :writing="project.title" 
-        :alt="project.alt"
+  <main>
+    <div class="projects">
+        <Polaroid v-for="project of projects" 
+          :key="projects.indexOf(project)"
+          :src="project.img" 
+          :writing="project.title" 
+          :alt="project.alt"
         />
+    </div>
   </main>
 </div>
 </template>
@@ -53,24 +55,39 @@ export default {
       ]
     }
   }
+
+  //methods, toPrevious, toNext
 }
 </script>
 
 <style>
-main.projects {
+.projects {
   display: flex; 
   overflow-x: scroll;
   margin-top: 128px;
   scroll-snap-type: x mandatory;
 }
 
-main > .polaroid {
+.projects > .polaroid {
   margin: 32px;
   scroll-snap-align: center;
 }
 
+@media (max-width: 52em) {
+  .projects {
+    margin-top: 0; 
+  }
+}
+
+@media (max-width: 63em) {
+  .projects {
+    flex-direction: column; 
+    align-items: center;
+  }
+}
+
 @media (min-width: 119em) {
-  main.projects {
+  .projects {
     justify-content: center;
   }
 }
