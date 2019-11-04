@@ -9,6 +9,7 @@
           :src="project.img" 
           :writing="project.title" 
           :alt="project.alt"
+          :hasEffect="true"
         />
       </nuxt-link>
     </div>

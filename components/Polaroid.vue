@@ -1,6 +1,6 @@
 <template>
     <div class="polaroid" :class="{small: isSmall}">
-        <div class="polaroid-clip">
+        <div class="polaroid-clip" :class="{develop: hasEffect}">
             <img :src="src" :alt="alt">
         </div>
         <p>{{ writing }}</p>
@@ -17,6 +17,10 @@ export default {
             type: Boolean,
             default: false,
         },
+        hasEffect: {
+            type: Boolean,
+            default: false,
+        }
     }
 }
 </script>
@@ -65,6 +69,25 @@ img {
 
     .polaroid-clip {
         width: 200px 
+    }
+}
+
+.develop {
+    background-color: $primary-dark-2;
+
+    img {
+        transition: opacity 1.5s;
+        mix-blend-mode: luminosity;
+        opacity: 0.7;
+    }
+
+    &:hover {
+
+        img {
+            transition: opacity 1.5s;
+            mix-blend-mode: normal; 
+            opacity: 1;
+        }
     }
 }
 
