@@ -2,7 +2,7 @@
 <div>
     <Navbar />
     <main>
-        <Polaroid src="/img/headshot.jpg" writing="October 2019, Shanghai" alt="A selfie of Imani wearing a Fairwhale coat in Shnaghai. It looks quite futurisic with trees and tall buildings in the background."/>
+        <Polaroid src="/img/headshot.jpg" writing="October 2019, Shanghai" alt="A selfie of Imani wearing a Fairwhale coat in Shanghai. The whole scene looks quite futurisic with trees and tall buildings in the background."/>
         <p>
             Hi I'm Imani, a creative developer based in Rotterdam, The Netherlands. 
             I love exploring unique ways to mix technology and creativity. 
