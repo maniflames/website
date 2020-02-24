@@ -52,12 +52,18 @@ export default {
   overflow-x: scroll;
   margin-top: 128px;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none;
 }
 
 .projects > a {
   margin: 32px;
   scroll-snap-align: center;
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
 @media (max-width: 52em) {
