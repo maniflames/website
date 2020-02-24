@@ -156,7 +156,14 @@ export default {
         }
 
         ul {
-            margin: 0px; 
+            display: flex;
+            justify-content: space-around;
+            margin: 0px;
+            margin-top: 8px; 
+
+            li {
+                width: fit-content;
+            }
         }
     }
 }
