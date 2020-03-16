@@ -11,6 +11,7 @@ ul {
 //shared styles
 html, body {
     background-color: $primary-dark-2; 
+    box-sizing: border-box;
 }
 
 button {
