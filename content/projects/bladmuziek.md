@@ -23,7 +23,7 @@ previewImages:
     - src: '/img/bladmuziek/bladmuziek-festival-der-aa.jpg'
       alt: 'connecting humans, plants and music'
       title: 'humans, plants and music'
-    - src: '/img/bladmuziek/bladmuziek-hardware.png'
+    - src: '/img/bladmuziek/bladmuziek-hardware.jpg'
       alt: 'runs on Raspberry Pi'
       title: 'runs on Raspberry Pi'
 ---

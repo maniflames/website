@@ -39,7 +39,7 @@ The location we had to create an installation for was the 'Willemsplein', a smal
 ![](/img/virtuvis/virtuvis-location.jpg)
 ![](/img/virtuvis/virtuvis-brainstorm-1.jpg) 
 ![](/img/virtuvis/virtuvis-brainstorm-2.jpg) 
-![](/img/virtuvis/virtuvis-concept.png) 
+![](/img/virtuvis/virtuvis-concept.jpg) 
 
 To realise this there needed to be an API that all parts of the concept could communicate to. That's why I decided that I wanted to build an API, not just consume one. I started out by creating a small OOP library in PHP that did not only abstract away API request to the MediaWiki API and the Weather API but also made querying the database a bit easier. I did not know what ORM was at the time but I basically attempted to create a small version myself. This would allow me to create new endpoints with varying logic a bit faster. I created eindpoints for others to consume by setting headers and returning JSON in PHP. The API and database were hosted on a shared hosting solution and deployed with a FTP client. 
 

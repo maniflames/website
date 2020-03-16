@@ -1,7 +1,7 @@
 ---
 title: 'SSV'
 alt: 'a project pure so I can test this stuff'
-img: '/img/ssv/ssv-landing.png'
+img: '/img/ssv/ssv-landing.jpg'
 details:
     team: 'Cye Wong-Loi Sing, Natasha van Meerkeren, David Law, Imani Dap'
     client: 'Rotterdam Sport Support'
@@ -15,10 +15,10 @@ details:
         - icon: 'ExternalIcon'
           url: 'http://schoolsportvereniging.nl/'
 previewImages: 
-    - src: '/img/ssv/ssv-search-small.png'
+    - src: '/img/ssv/ssv-search-small.jpg'
       alt: 'using natural language'
       title: 'use natural language'
-    - src: '/img/ssv/ssv-landing.png'
+    - src: '/img/ssv/ssv-landing.jpg'
       alt: 'making sure Rotterdam moves'
       title: 'start moving rotterdam!'
     - src: '/img/ssv/ssv-search-result-small.png'
@@ -44,9 +44,9 @@ At Brand New Guys Netlify is the standard host for clients who request static we
 
 Because the target audience was very young the creative director and UX designer had the idea to create a natural laguage form. In that way kids would only have to complete a sentence to get the best results instead of having to come up with filter strategies themselves. I was asked to use listJS to parse information from the sports that would be staticly generated and extract the search results using the fuzzy search feature. This feature turned out to be too restrictive for this use case. That is why I build a custom filter with their filter feature, which is similar to using ES6's filter. The initial design of the filter didn't have autocomplete but since many kids were young and didn't always know how to spell their desired sport this feature was requested by the client and implemented by using a dynamic regular expression. 
 
-![The SSV natural language form. A short story in dutch stating: I want to try <sport>. I am available on <every day>. My postal code is <postal code> and I'd like to walk a maximum of <minutes of travel>. ](/img/ssv/ssv-search.png)
-![An example of what search results look like. Cards stating showing a photo and stating the sport and neighbourhood of the club.](/img/ssv/ssv-search-results.png)
-![An example of what a happens if you click on the results. You see the large version of the image, can read some general information like the exact address, what the cost is and when you'll train and you have the chance to sign up for a sport.](/img/ssv/ssv-search-result.png)
+![The SSV natural language form. A short story in dutch stating: I want to try <sport>. I am available on <every day>. My postal code is <postal code> and I'd like to walk a maximum of <minutes of travel>. ](/img/ssv/ssv-search.jpg)
+![An example of what search results look like. Cards stating showing a photo and stating the sport and neighbourhood of the club.](/img/ssv/ssv-search-results.jpg)
+![An example of what a happens if you click on the results. You see the large version of the image, can read some general information like the exact address, what the cost is and when you'll train and you have the chance to sign up for a sport.](/img/ssv/ssv-search-result.jpg)
 
 The distances between 'home' and the relevant sports clubs are done by the Google Matrix API. Due to security it was very important to make sure this key wasn't stored anywere in client-side code. That is why the requests are made using Netlify functions, a thin abstraction layer on top of AWS lambda, using NodeJS. This allowed us to store the API key as an environment variable in Netlify's build configurations and only use the key on the server-side. 
 
