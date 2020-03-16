@@ -100,4 +100,10 @@ img {
         height: 300px; 
     }
 }
+
+@media (max-width: 25em) {
+    .polaroid p {
+        max-width: 210px;
+    }
+}
 </style>

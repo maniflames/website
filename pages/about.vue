@@ -147,4 +147,10 @@ main {
         align-items: center; 
     }
 }
+
+@media (max-width: 25em) {
+    main {
+        padding: 0; 
+    }
+}
 </style>
