@@ -2,14 +2,14 @@
 <div>
     <Navbar />
     <main>
-        <Polaroid src="/img/headshot.jpg" writing="October 2019, Shanghai" alt="A selfie of Imani wearing a Fairwhale coat in Shanghai. The whole scene looks quite futurisic with trees and tall buildings in the background."/>
+        <Polaroid src="/img/headshot.jpg" writing="March 2020, at home because of corona" alt="A selfie of Imani wearing a HipHopHuis shirt. She's in her bedroom similing, looking kind of goofy with her glasses on."/>
         <p>
             Hi I'm Imani, a creative developer based in Rotterdam, The Netherlands. 
             I love exploring unique ways to mix technology and creativity. 
 
             For the past three years I've had the opportunity to get to know the world of software development. 
             Through building things for my bachelors in creative media and game technologies, an internship at UpReach in Berlin and a side job as student Developer at Brand New Guys, 
-            I have acquired the skills and experience to help with building things for humans.
+            I have acquired the skills and experience to help with building things for humans. Right now I'm completing my studies at the Royal Netherlands Army.
         </p>
     </main>
     <footer>
