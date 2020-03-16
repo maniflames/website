@@ -29,7 +29,7 @@ export default {
 
   async asyncData() {
     //for some reason nuxt does not allow me to use the filesystem API, i might need to create some middelware but for now this quickfix will do
-    let projectSlugs = ['testing', 'testing-2', 'testing-3', 'testing-4', 'testing-5']
+    let projectSlugs = ['sid', 'ssv', 'bladmuziek', 'virtuvis']
     let projects = []
 
     for(let slug of projectSlugs) {
