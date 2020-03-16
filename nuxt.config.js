@@ -58,11 +58,10 @@ export default {
 
   generate: {
     routes: [
-      '/project/testing',
-      '/project/testing-2',
-      '/project/testing-3',
-      '/project/testing-4',
-      '/project/testing-5'
+      '/project/bladmuziek',
+      '/project/sid',
+      '/project/ssv',
+      '/project/virtuvis'
     ]
   }
 }
