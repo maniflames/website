@@ -21,7 +21,7 @@
                     </p>
                 </section>
                 <section v-if="details.client"> 
-                    <h4>Client</h4>
+                    <h4>Client(s)</h4>
                     <p>
                         {{ details.client }}
                     </p>
@@ -47,7 +47,7 @@
                     </p>
                 </section>
                 <section v-if="details.seen">
-                    <h4>As seen in</h4>
+                    <h4>As seen on</h4>
                     <ul>
                         <li v-for="publication of details.seen" :key="details.seen.indexOf(publication)">
                             <a :href="publication.url" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
@@ -81,6 +81,8 @@ import Navbar from '~/components/Navbar.vue'
 import Polaroid from '~/components/Polaroid.vue'
 import GithubLogo from '~/assets/svg/github.svg'
 import DevLogo from '~/assets/svg/dev.svg'
+import ExternalIcon from '~/assets/svg/external.svg'
+import InstagramLogo from '~/assets/svg/instagram.svg'
 
 export default {
     components: {
@@ -88,6 +90,8 @@ export default {
         Polaroid, 
         GithubLogo,
         DevLogo,
+        ExternalIcon,
+        InstagramLogo
     },
     async asyncData({ params }) {
         let file = await import('~/content/projects/' + params.slug + '.md')
@@ -157,12 +161,13 @@ export default {
 
         ul {
             display: flex;
-            justify-content: space-around;
+            justify-content: flex-start;
             margin: 0px;
             margin-top: 8px; 
 
             li {
                 width: fit-content;
+                margin-right: 24px;
             }
         }
     }
@@ -182,6 +187,10 @@ main article {
         display: block;
         margin: auto; 
         margin-top: 64px; 
+    }
+
+    ul {
+        list-style: unset;
     }
 }
 
