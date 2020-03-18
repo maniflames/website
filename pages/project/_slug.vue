@@ -184,6 +184,7 @@ main article {
     img,
     p img {
         width: 450px;
+        max-width: 100%;
         display: block;
         margin: auto; 
         margin-top: 64px; 
