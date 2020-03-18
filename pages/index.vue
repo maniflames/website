@@ -49,14 +49,16 @@ export default {
 <style>
 .projects {
   display: flex; 
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   margin-top: 128px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  /* scroll-snap-type: x mandatory; */
+  /* scrollbar-width: none; */
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .projects > a {
-  margin: 32px;
+  margin: 16px;
   scroll-snap-align: center;
   text-decoration: none;
 }
