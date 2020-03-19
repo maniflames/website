@@ -14,6 +14,8 @@ details:
         - title: 'Profielen'
           url: 'https://profielen.hr.nl/2018/hr-studenten-willen-eenzaamheid-tegengaan-met-interactieve-plantenbak/'
     urls: 
+        - icon: 'GithubLogo'
+          url: 'https://github.com/maniflames/bladmuziek-server'
         - icon: 'InstagramLogo'
           url: 'https://www.instagram.com/bladmuziek010/'
 previewImages: 
