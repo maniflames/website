@@ -25,11 +25,11 @@ export default {
     asyncData() {
         return {
             articles: [
-                {
-                    title: 'Ego is the enemy: overcoming your own thoughts',
-                    summary: 'There was one book that I had laying around that has always been interesting to me but I didn\'t finish until now. I\'m glad I picked it up and read it all.',
-                    url: 'https://dev.to/maniflames/the-book-that-will-drag-me-through-final-stage-of-my-bachelor-190b'
-                },
+                // {
+                //     title: 'Ego is the enemy: overcoming your own thoughts',
+                //     summary: 'There was one book that I had laying around that has always been interesting to me but I didn\'t finish until now. I\'m glad I picked it up and read it all.',
+                //     url: 'https://dev.to/maniflames/the-book-that-will-drag-me-through-final-stage-of-my-bachelor-190b'
+                // },
                 {
                     title: 'From web to embedded: exploring a different sub-field within tech',
                     summary: 'For the past few years I have had the pleasure of learing software development. Like a lot of others, I initially focused on the web. Over time however I realized that, although I love the web, I wanted to build something that wouldn\'t disappear once you close your laptop.',
